@@ -35,7 +35,7 @@ aws sts get-caller-identity
 **From user request, determine:**
 - Target email address (this becomes both username and email attribute)
 - Target account (default: dtmi-prod unless specified)
-- Password (default: DiscountTire1$DTMI! from .env)
+- Password (default: [REDACTED] from .env)
 
 ### 3. Dynamic User Pool Discovery
 **For the target account, discover user pools:**
@@ -74,7 +74,7 @@ aws cognito-idp list-user-pools --max-results 10 --profile [target-account]
    → Target user pool: [USER_POOL_ID] ([USER_POOL_NAME])
    → Create user: [EMAIL]
    → Username: [EMAIL] (same as email)
-   → Password: DiscountTire1$DTMI!
+   → Password: [REDACTED]
    → Password type: Permanent (no forced change on first login)
    → Email verified: Yes
    → Custom attributes: None
@@ -138,7 +138,7 @@ aws cognito-idp admin-set-user-password \
 - Temporary password workflows
 
 ## Default Password
-**From .env file:** `DiscountTire1$DTMI!`
+**From .env file:** `[REDACTED]`
 - 18 characters
 - Meets AWS Cognito permanent password requirements
 - Uppercase + lowercase + numbers + symbols

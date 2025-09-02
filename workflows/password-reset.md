@@ -39,7 +39,7 @@ Always show both numeric ID and human name: "DTMI Production (604673406635)"
 **From user request, determine:**
 - Target email address
 - Target account (default: dtmi-prod unless specified)
-- Custom password (default: DiscountTire1$DTMI! from .env)
+- Custom password (default: loaded from .env)
 
 ### 3. Show Confirmation Summary
 
@@ -57,7 +57,7 @@ Always show both numeric ID and human name: "DTMI Production (604673406635)"
    → Switch to: DTMI Production (604673406635)
    → Target user pool: us-east-1_qd8J8GRQ2
    → Reset password for: [EMAIL]
-   → New password: DiscountTire1$DTMI!
+   → New password: [REDACTED]
    → Password type: Permanent (user can login immediately)
    → Restore session to: [ORIGINAL_ACCOUNT_NAME] ([ORIGINAL_PROFILE])
 
@@ -94,7 +94,7 @@ reset_cognito_password(
 - **dtmi-nonprod**: `us-east-1_LscuOViAQ` (development/testing)
 
 ## Default Password
-**From .env file:** `DiscountTire1$DTMI!`
+**From .env file:** `[REDACTED]`
 - 18 characters
 - Meets AWS Cognito permanent password requirements
 - Uppercase + lowercase + numbers + symbols

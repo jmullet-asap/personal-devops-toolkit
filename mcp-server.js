@@ -69,7 +69,7 @@ server.setRequestHandler(ListToolsRequestSchema, async () => {
             },
             password: {
               type: 'string',
-              description: 'Custom password to set. If omitted, uses secure default password from .env file (DiscountTire$DTMI!).',
+              description: 'Custom password to set. If omitted, uses secure default password from .env file.',
             },
           },
           required: ['email'],
@@ -259,7 +259,7 @@ The Excel file is ready for your boss! 📈`,
       }
       
       // Determine final password
-      const finalPassword = password || process.env.DEFAULT_COGNITO_PASSWORD || 'DiscountTire$DTMI!';
+      const finalPassword = password || process.env.DEFAULT_COGNITO_PASSWORD || 'DEFAULT_PASSWORD_NOT_SET';
       
       // Build command for execution
       const commandArgs = [

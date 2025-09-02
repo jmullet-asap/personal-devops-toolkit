@@ -97,7 +97,7 @@ Build small, reusable tools that chain together. Let AI and CLI work together se
 1. Captures current AWS profile state for restoration
 2. Switches to target AWS account (dtmi-prod, dtmi-nonprod)
 3. Validates authentication (triggers SSO login if needed)
-4. Uses secure default password: `DiscountTire1$DTMI!` (18 chars, meets all AWS requirements)
+4. Uses secure default password from .env file (meets all AWS requirements)
 5. Executes `aws cognito-idp admin-set-user-password` with appropriate flags
 6. Restores original AWS profile to prevent session disruption
 7. Returns new password for immediate use
