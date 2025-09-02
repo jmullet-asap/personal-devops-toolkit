@@ -1,0 +1,8 @@
+.env
+node_modules/
+*.xlsx
+*.json
+*.txt
+.DS_Store
+session.md
+todo.md
